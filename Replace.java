@@ -1,4 +1,4 @@
-package day06_Manipulations;
+package day09_ForLoopVeMethodOluşturma;
 
 public class Replace {
     public static void main(String[] args) {
