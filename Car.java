@@ -1,30 +1,44 @@
-package Java_Dersleri1;
+package Java_Dersleri04;
 
 public class Car {
-    // Fiels, properties
-  private String color;
-    private   String model;
-    private  double engine;
+    private String color;
+
+    private String model;
+
+    private double engine;
+
     private int doors;
-   public Car(String color,String model){
-       this(color,model,0,0);
-   }
-    public Car(){
-        //this.color = "Bilgi Yok";
-        //this.model = "Bilgi Yok";
-        //this.engine = 0;
-        //this.doors = 0;
-        this("Bilgi Yok","Bilgi Yok",0,0);
-    }
-    public Car(String color, String model, double engine, int doors){
-        this.color = color;
-        this.model = model;
-        this.engine = engine;
-        this.doors = doors;
+
+    private String packet;
+
+    private double price;
+
+    public Car (String color, String model , double engine, int doors, double price, String packet){
+        this.color=color;
+        this.engine=engine;
+        this.packet=packet;
+        this.model=model;
+        this.doors=doors;
+        this.price=price;
     }
 
-    public int getDoors() {
-        return doors;
+
+    public void showInfos() {
+        System.out.println("Arabanın Rengi : " + this.color);
+        System.out.println("Arabanın Kapı Sayısı : " + this.doors);
+        System.out.println("Arabanın Motoru : " + this.engine);
+        System.out.println("Arabanın Modeli : " + this.model);
+        System.out.println("Arabanın Paketi : " + this.packet);
+        System.out.println("Arabanın Fiyatı : " + this.price);
+    }
+
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getModel() {
@@ -43,31 +57,37 @@ public class Car {
         this.engine = engine;
     }
 
-    public void setDoors(int doors) {
-        if (doors ==2 || doors == 4) {
-            this.doors = doors;
-        }else {
-            System.out.println("Kapı sayısı sadece 2 veya 4 olabilir.");
-        }
+    public int getDoors() {
+        return doors;
     }
 
-    public void setColor(String color) {
-    this.color = color;
-}
-public String getColor() {
-    return this.color;
-}
-public void start(){
-    System.out.println("Araba Çalıştı...");
-}
-public void stop(){
-    System.out.println("Araba Durdu...");
-}
-public void showInfos(){
-    System.out.println("Arabanın Rengi: " + this.color);
-    System.out.println("Arabanın Modeli: " + this.model);
-    System.out.println("Arabanın Motor Hacmi: " + this.engine);
-    System.out.println("Arabanın Kapı Sayısı: " + this.doors);
+    public void setDoors(int doors) {
 
+        if (doors == 2 || doors == 4){
+            System.out.println();
+            this.doors = doors;
+        }else {
+            System.out.println("Kapı sayısı en az 2, en fazla 4 olabilir.");
+        }
+
+
+
+    }
+
+    public String getPacket() {
+        return packet;
+    }
+
+    public void setPacket(String packet) {
+        this.packet = packet;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
-}
+
